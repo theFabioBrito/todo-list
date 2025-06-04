@@ -7,13 +7,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
+    <class="container">
         <h1>Minha Lista de Tarefas</h1>
         <div class="input-container">
             <input type="text" id="taskInput" placeholder="Digite sua tarefa">
+            <input type="time" id="taskTime">
             <button onclick="addTask()">Adicionar</button>
         </div>
+
+        <div class="clear-container">
+            <button onclick="clearAll()">Limpar Tudo</button>
+        </div>
+
         <ul id="taskList"></ul>
+    
     </div>
 
     <script src="js/script.js"></script>

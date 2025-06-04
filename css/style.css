@@ -21,7 +21,22 @@ body {
 .input-container {
     display: flex;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
+
+.input-container input[type="text"]{
+    flex: 2;
+}
+
+.input-container input[type="time"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
 
 .input-container input {
     flex: 1;
@@ -39,6 +54,7 @@ body {
     color: #fff;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    flex: 0 0 auto;
 }
 
 ul {
@@ -51,4 +67,24 @@ li {
     background: #f1f1f1;
     margin-bottom: 10px;
     border-radius: 5px;
+}
+
+li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.clear-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.clear-container button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    background: #dc3545;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
 }
