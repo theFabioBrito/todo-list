@@ -1,3 +1,15 @@
+Lex, eu preciso fazer uma página web de ToDo List. Preciso que você leve em conta:
+
+Página HTML com responsividade;
+Página dedicada a estilização com CSS;
+Java Script para adicionar elementos incrementais.
+
+Essa página vai subir na minha página GitHub, então precisamos verificar se o repositório está configurado de forma correta.
+Após todos os requisitos acima, precisaremos fazer o deploy, ou seja, colocar o site em produção. 
+
+Vamos seguir um passo a passo, começando por onde você acredita que seja mais pertinente.
+
+
 Perfeito, Fabio. Agora vamos trabalhar de forma organizada e metódica. Como isso envolve várias camadas — código, versionamento e deploy — **vou montar o seu roteiro estratégico por fases.**
 
 ---
