@@ -9,6 +9,7 @@ Após todos os requisitos acima, precisaremos fazer o deploy, ou seja, colocar o
 
 Vamos seguir um passo a passo, começando por onde você acredita que seja mais pertinente.
 
+**************************************
 
 Perfeito, Fabio. Agora vamos trabalhar de forma organizada e metódica. Como isso envolve várias camadas — código, versionamento e deploy — **vou montar o seu roteiro estratégico por fases.**
 

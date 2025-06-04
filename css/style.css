@@ -1,60 +1,91 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+/* Reset geral */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .container {
-    background: #fff;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     width: 90%;
-    max-width: 500px;
+    max-width: 600px;
+}
+
+h1 {
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    color: #2d3748;
 }
 
 .input-container {
     display: flex;
-    margin-bottom: 20px;
     flex-wrap: wrap;
     gap: 10px;
+    margin-bottom: 25px;
 }
 
-.input-container input[type="text"]{
-    flex: 2;
-}
-
+.input-container input[type="text"],
 .input-container input[type="time"] {
     flex: 1;
-    padding: 10px;
+    padding: 12px 15px;
     font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 1px solid #cbd5e0;
+    border-radius: 10px;
+    background: #f7fafc;
+    transition: border-color 0.2s;
 }
 
-
-.input-container input {
-    flex: 1;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px 0 0 5px;
+.input-container input:focus {
+    border-color: #3182ce;
+    outline: none;
 }
 
 .input-container button {
-    padding: 10px 20px;
+    padding: 12px 20px;
     font-size: 16px;
     border: none;
-    background: #007bff;
+    background: #3182ce;
     color: #fff;
-    border-radius: 0 5px 5px 0;
+    border-radius: 10px;
     cursor: pointer;
-    flex: 0 0 auto;
+    transition: background 0.3s;
+}
+
+.input-container button:hover {
+    background: #2b6cb0;
+}
+
+.clear-container {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.clear-container button {
+    padding: 10px 18px;
+    font-size: 14px;
+    border: none;
+    background: #e53e3e;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.clear-container button:hover {
+    background: #c53030;
 }
 
 ul {
@@ -63,28 +94,80 @@ ul {
 }
 
 li {
-    padding: 10px;
-    background: #f1f1f1;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edf2f7;
+    margin-bottom: 12px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-li.completed {
+li:hover {
+    background: #e2e8f0;
+}
+
+li.completed span {
     text-decoration: line-through;
     opacity: 0.6;
+    transition: 0.3s;
 }
 
-.clear-container {
-    text-align: right;
-    margin-bottom: 20px;
+li span {
+    flex: 1;
+    margin-left: 10px;
+    font-size: 16px;
 }
 
-.clear-container button {
-    padding: 10px 20px;
+li input[type="checkbox"] {
+    transform: scale(1.4);
+}
+
+li button {
+    margin-left: 10px;
+    padding: 8px 14px;
     font-size: 14px;
     border: none;
-    background: #dc3545;
+    background: #718096;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background 0.3s;
+}
+
+li button:hover {
+    background: #4a5568;
+}
+
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;       /* ↓ Reduzimos o tamanho */
+    height: 16px;
+    border: 2px solid #3182ce;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;
+    background-color: #fff;
+    vertical-align: middle;  /* ↑ Alinhamento vertical */
+}
+
+.custom-checkbox:checked {
+    background-color: #3182ce;
+    border-color: #3182ce;
+}
+
+.custom-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    top: 3px;          /* ↓ Ajuste de posicionamento */
+    left: 5px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 }
